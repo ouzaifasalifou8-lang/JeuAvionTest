@@ -25,10 +25,10 @@ jobs:
           flutter-version: '3.16.0'
           channel: 'stable'
 
-      # NOUVELLE ÉTAPE : Génère les dossiers de configuration manquants (dont le dossier android)
+            # Modifier uniquement cette étape :
       - name: Generer la configuration du projet
-        run: flutter create . --platforms=android
-
+        run: flutter create . --platforms=android --project-name=jeu_avion
+        
       # On télécharge les dépendances
       - name: Telecharger les dependances
         run: flutter pub get
