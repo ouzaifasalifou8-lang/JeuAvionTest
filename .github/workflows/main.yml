@@ -33,12 +33,11 @@ jobs:
       - name: Telecharger les dependances
         run: flutter pub get
 
-      - name: Compiler APK de Debug
-        run: flutter build apk --debug
-
+      - name: Compiler APK de release
+        run: flutter build apk --release
       - name: Sauvegarder l'APK genere
         uses: actions/upload-artifact@v4
         with:
-          name: JeuAvion-Debug.apk
-          path: build/app/outputs/flutter-apk/app-debug.apk
+          name: JeuAvion-release.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
           
